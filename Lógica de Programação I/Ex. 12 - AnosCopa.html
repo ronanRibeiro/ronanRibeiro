@@ -1,0 +1,25 @@
+<!-- Ronan Sales Ribeiro --> 
+<!-- Alura (alura.com.br) - Lógica de programação I: os primeiros programas com Javascript e HTML --> 
+<!-- Ex. - Anos de Copa --> 
+
+<meta charset="UTF-8">
+<script>
+
+    function pulaLinha() {
+
+        document.write("<br>");
+    }
+
+    function mostra(frase) {
+
+        document.write(frase);
+        pulaLinha();
+    }
+
+    var anoCopa = 1930
+    while (anoCopa <= 2016) {
+
+        mostra("Teve copa em " + anoCopa);
+        anoCopa = anoCopa + 4;
+    }
+</script>

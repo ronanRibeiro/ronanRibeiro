@@ -1,0 +1,28 @@
+<!-- Ronan Sales Ribeiro --> 
+<!-- Alura (alura.com.br) - Lógica de programação I: os primeiros programas com Javascript e HTML --> 
+<!-- Ex. - Número Aleatório --> 
+
+<meta charset="UTF-8">
+<script>
+
+function pulaLinha() {
+    document.write("<br><br>");
+}
+
+function mostra(frase) {
+    document.write(frase);
+    pulaLinha();
+}
+
+var numCerto = Math.round(Math.random()*10);
+console.log (numCerto);
+var chute = parseInt(prompt("Digite seu número!"));
+
+if (chute == numCerto) {
+	mostra ("Você acertou!");
+} 
+else {
+	mostra ("Você errou!");
+}
+
+</script>

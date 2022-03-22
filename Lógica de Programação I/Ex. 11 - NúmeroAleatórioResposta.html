@@ -1,0 +1,40 @@
+<!-- Ronan Sales Ribeiro --> 
+<!-- Alura (alura.com.br) - Lógica de programação I: os primeiros programas com Javascript e HTML --> 
+<!-- Ex. - Número Aleatório com Resposta --> 
+
+<meta charset="UTF-8">
+<script>
+
+    function pulaLinha() {
+
+        document.write("<br>");
+    }
+
+    function mostra(frase) {
+
+        document.write(frase);
+        pulaLinha();
+    }
+
+    function sorteia(n){
+        
+        return Math.round(Math.random()*n);
+    }
+
+    var n = parseInt(prompt("Digite o número máximo"));
+    var numeroPensado = sorteia(n);
+    var chute = parseInt(prompt("Já pensei. Qual você acha que é?"));
+
+    if(chute == numeroPensado) {
+
+        mostra("Uau! Você acertou, pois eu pensei no " + numeroPensado);
+    } 
+    if (chute < numeroPensado) {
+
+        mostra("Você errou para menos! Eu tinha pensado no " + numeroPensado);
+    }
+    if (chute > numeroPensado) {
+
+        mostra("Você errou para mais! Eu tinha pensado no " + numeroPensado);
+    }
+</script>

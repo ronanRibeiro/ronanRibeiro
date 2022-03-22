@@ -1,0 +1,41 @@
+<!-- Ronan Sales Ribeiro --> 
+<!-- Alura (alura.com.br) - Lógica de programação I: os primeiros programas com Javascript e HTML --> 
+<!-- Ex. - IMC --> 
+
+<meta charset="UTF-8">
+<script>
+
+function pulaLinha() {
+    document.write("<br><br>");
+}
+
+function mostra(frase) {
+    document.write(frase);
+    pulaLinha();
+}
+
+function calculaImc(peso, altura){
+
+var imc = peso/(altura*altura);
+return imc;
+
+}
+
+var peso = prompt("Qual o seu peso?");
+var altura = prompt("Qual a sua altura?");
+var imc = calculaImc(peso,altura);
+mostra ("Seu imc é " + imc);
+
+if (imc < 18.5){
+	mostra ("Você está abaixo do recomendado")
+}
+if (imc > 35){
+	mostra ("Você está acima do recomendado")
+}
+if (imc >= 18.5 && imc <= 35){
+	
+	mostra ("Você está dentro do recomendado")
+
+}
+
+</script>

@@ -1,0 +1,35 @@
+<!-- Ronan Sales Ribeiro --> 
+<!-- Alura (alura.com.br) - Lógica de programação I: os primeiros programas com Javascript e HTML --> 
+<!-- Ex. - Time --> 
+
+<meta charset="UTF-8">
+<script>
+
+function pulaLinha() {
+    document.write("<br><br>");
+}
+
+function mostra(frase) {
+    document.write(frase);
+    pulaLinha();
+}
+
+
+var vit = parseInt(prompt ("Entre com o número de vitórias"));
+var emp = parseInt(prompt ("Entre com o número de empates"));
+var pnt = vit * 3 + emp;
+
+mostra ("Seu time possui " + pnt + " pontos.");
+
+if (pnt > 28){
+	mostra ("Seu time está melhor que o ano passado")
+}
+
+if (pnt < 28){
+	mostra ("Seu time está pior que o ano passado")
+}
+
+if (pnt == 28){
+	mostra ("Seu time está igual que o ano passado")
+}
+</script>

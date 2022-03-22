@@ -1,0 +1,69 @@
+<!-- Ronan Sales Ribeiro --> 
+<!-- Alura (alura.com.br) - Lógica de programação I: os primeiros programas com Javascript e HTML --> 
+<!-- Ex. - Avinhe um dos 3 números entre 1 e 10 --> 
+
+<input/>
+<button>Compare com o meu segredo</button>
+
+<script>
+
+	function sorteia() {
+		return Math.round(Math.random()*10);
+	}
+
+	function sorteiaNumero (quantidade) {
+		var segredo = [];
+		var numero = 1;
+
+		while (numero <= quantidade){
+			var igual = false;
+			var NumAleatorio = sorteia();
+
+			if (NumAleatorio != 0 ) {
+				for (var posicao = 0; posicao < segredo.lenght; posicao++){
+					if (segredo[posicao] == NumAleatorio) {
+						igual = true;
+						break;
+					}
+				}
+				if (igual == false) {
+					segredo.push(NumAleatorio);
+					numero++;
+				}	
+			}	
+		}
+		return segredo;
+	}
+	var segredo = sorteiaNumero(3);
+
+	var input = document.querySelector("input");
+	input.focus();
+
+	console.log(segredo)
+	
+	function verifica () {
+
+		var achou = false;
+		
+        for(var posicao = 0; posicao < segredo.length; posicao++) {
+			if (input.value == segredo[posicao]) {
+				alert ("Você acertou!");
+				achou = true;
+				break;
+			} 
+
+		}
+
+		if (achou == false) {
+			alert ("Você errou!");
+		}
+
+		input.value = "";
+		input.focus();
+	}
+
+	var button = document.querySelector("button");
+
+	button.onclick = verifica;
+
+</script>
