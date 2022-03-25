@@ -1,0 +1,57 @@
+<!-- Ronan Sales Ribeiro --> 
+<!-- https://7daysofcode.io/ --> 
+<!-- Dia 3 --> 
+
+<!DOCTYPE html>
+
+<script>
+    const area = prompt("Qual área você gostaria de seguir? Digite 1 para Front-End ou 2 para Back-End");
+    let lista = true;
+
+    if (area == 1) {
+        prompt ("Você gostaria de aprender C# ou aprender Java?");
+        alert ("A área de Front-End vai te propor ótimos desafios! Ótima escolha!");
+        tipo = prompt ("Agora, caso você queira de seguir se especializando na área escolhida, digite 1, ou caso deseje seguir se desenvolvendo para se tornar Fullstack, digite 2.");
+        if (tipo == 1){
+            alert("Seguir se especializando é uma ótima decisão!");
+            while (lista == true) {
+                const novasTecnologias = prompt ("Agora, nos diga em quais tecnologias você gostaria de se especializar? Digite 'ok' quando tiver terminado todas elas");
+                if (novasTecnologias == "ok") {
+                    lista = false;
+                }
+            }
+        }
+            if (tipo == 2){
+            alert("Ser um Fullstack é uma carreira de muitos estudos, mas te trará ótimos resultados! Ótima decisão!");
+            while (lista == true) {
+                const novasTecnologias = prompt ("Agora, nos diga em quais tecnologias você gostaria de se especializar? Digite 'ok' quando tiver terminado todas elas");
+                if (novasTecnologias == "ok") {
+                    lista = false;
+                }
+            }
+        }
+    }
+    if (area == 2) {
+        prompt ("Você gostaria de aprender React ou aprender Vue?");
+        alert ("A área de Back-End vai te propor ótimos desafios!");
+        tipo = prompt ("Agora, caso você queira de seguir se especializando na área escolhida, digite 1, ou caso deseje seguir se desenvolvendo para se tornar Fullstack, digite 2.");
+        if (tipo == 1){
+            alert("Seguir se especializando é uma ótima decisão!");
+            while (lista == true) {
+                const novasTecnologias = prompt ("Agora, nos diga em quais tecnologias você gostaria de se especializar? Digite 'ok' quando tiver terminado todas elas");
+                if (novasTecnologias == "ok") {
+                    lista = false;
+                }
+            }
+        }
+        if (tipo == 2){
+            alert("Ser um Fullstack é uma carreira de muitos estudos, mas te trará ótimos resultados! Ótima decisão!");
+            while (lista == true) {
+                const novasTecnologias = prompt ("Agora, nos diga em quais tecnologias você gostaria de se especializar? Digite 'ok' quando tiver terminado todas elas");
+                if (novasTecnologias == "ok") {
+                    lista = false;
+                }
+            }
+        }
+    }
+</script>
