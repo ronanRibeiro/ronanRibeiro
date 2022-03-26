@@ -1,0 +1,27 @@
+<!-- Ronan Sales Ribeiro --> 
+<!-- https://7daysofcode.io/ --> 
+<!-- Dia 4 --> 
+
+<!DOCTYPE html>
+
+<script>
+    let numCerto = Math.floor(Math.random()*11);
+    let cont = 1
+
+    alert("Advinhe o número (entre 0 e 10). Você tem três tentaivas.");
+
+    while (cont <= 3){
+        numChute = prompt (cont + "ª tentiva:");
+        if (numChute == numCerto){
+            alert("Parabéns! Você acertou!");
+            break;
+        }
+        if (numChute != numCerto & cont == 3){
+            alert("Você errou! O número certo era "+ numCerto);
+            break;
+        }
+        alert ("Você errou! Tente novamente");
+        cont++
+    }
+
+</script>
