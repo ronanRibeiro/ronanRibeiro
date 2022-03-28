@@ -1,0 +1,62 @@
+<!-- Ronan Sales Ribeiro --> 
+<!-- https://7daysofcode.io/ --> 
+<!-- Dia 5 --> 
+
+<!DOCTYPE html>
+
+<script>
+    //Declaração das variáveis
+    let lista = [];
+    let categoriaArray = [];
+    lista.push(categoriaArray);
+    let continuar = true;
+   
+    //Preenchimento da lista
+    while (continuar == true) {
+        let continuarTeste = prompt ("Você deseja adicionar uma comida na sua lista de compras? \n Responda com sim ou não");
+
+        //Teste para adionar os produtos
+        if (continuarTeste == 'sim'){
+            let categoria = prompt ("Em qual categoria você gostaria de adicionar o produto?");
+            let produto = prompt("Qual é o produto?");
+
+            //Adicionar em uma categoria existente
+            if (categoriaArray.includes(categoria) == true) {
+                    let i = categoriaArray.indexOf(categoria) + 1;
+                    lista[i].push(produto);
+            }
+            //Criação de uma nova categoria e adiçção do produto
+            else {
+                    categoriaArray.push(categoria);
+                    let produtoArray = [];
+                    lista.push(produtoArray);
+                    let i = categoriaArray.indexOf(categoria) + 1;
+                    lista[i].push(produto)
+            }
+
+        }
+        //Sair do while
+        else if (continuarTeste == 'não' || continuarTeste == 'nao'){
+            continuar = false;
+        }
+        //Teste de erro
+        else {
+            alert ("Comando inválido");
+        }
+   
+   }
+
+   //Impressão da Lista
+   let i = 0;
+   while (i < lista[0].length){
+       console.log(lista[0][i] +  ':\n');
+       i++;
+
+       let j = 0;
+       while (j < lista[i].length){
+           console.log('     ' + lista[i][j] + '\n');
+           j++;
+       }
+   }
+
+</script>
