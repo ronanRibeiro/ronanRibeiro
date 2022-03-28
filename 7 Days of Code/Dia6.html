@@ -1,0 +1,124 @@
+<!-- Ronan Sales Ribeiro --> 
+<!-- https://7daysofcode.io/ --> 
+<!-- Dia 6 --> 
+
+<!DOCTYPE html>
+
+<script>
+    //Declaração das variáveis
+    let lista = [];
+    let categoriaArray = [];
+    lista.push(categoriaArray);
+    let continuar = true;
+   
+    //Preenchimento da lista
+    while (continuar == true) {
+        let continuarTeste = prompt ("Você deseja adicionar ou remover um item na sua lista de compras? \n Responda com sim ou não");
+
+        //Teste para adicionar ou remover os produtos
+        if (continuarTeste == 'sim' || continuarTeste == 's'){
+            let adicionarRemover = prompt ("Você gostaria de adicionar ou remover o produto?");
+            
+            //Adicionar
+            if (adicionarRemover == 'adicionar' || adicionarRemover == 'a'){
+                let categoria = prompt ("Em qual categoria você gostaria de adicionar o produto?");
+                let produto = prompt("Qual é o produto?");
+
+                //Adicionar em uma categoria existente
+                if (categoriaArray.includes(categoria) == true) {
+                        let i = categoriaArray.indexOf(categoria) + 1;
+                        lista[i].push(produto);
+                }
+                //Criação de uma nova categoria e adição do produto
+                else {
+                        categoriaArray.push(categoria);
+                        let produtoArray = [];
+                        lista.push(produtoArray);
+                        let i = categoriaArray.indexOf(categoria) + 1;
+                        lista[i].push(produto)
+                }
+            }
+
+            //Remover
+            if (adicionarRemover == 'remover' || adicionarRemover == 'r') {
+                //Teste se existe 1 item
+                if (categoriaArray.length != 0) {
+                    let existeItem = false;
+
+                    //Impressão da lista:
+                    while (existeItem == false) {                        
+                        let i = 0;
+                        while (i < lista[0].length){
+                            console.log(lista[0][i] +  ':\n');
+                            i++;
+
+                            let j = 0;
+                            while (j < lista[i].length){
+                                console.log('     ' + lista[i][j] + '\n');
+                                j++;
+                            }
+                        }
+
+                        //Receber o item a remover
+                        let itemRemover = prompt ("Qual item você deseja remover? \nOu digite sair para voltar ao menu anterior.");
+                        
+                        //Encontrar posição do item na matriz lista
+                        i = 1;
+                        let linhaItem = 0;                
+                        while (i <= lista[0].length) {
+                            let existeCategoriaDoItemParaRemover = lista[i].includes(itemRemover);
+
+                            if (existeCategoriaDoItemParaRemover == true) {
+                                existeItem = true;
+                                linhaItem = i;
+                                break;
+                            }
+
+                            i++;
+                        }
+
+                        //Remover Item                        
+                        let j = lista[linhaItem].indexOf(itemRemover);
+                        lista[linhaItem].splice(j,1);
+
+                        //Voltar ao menu anterior
+                        if (itemRemover == 'sair' || itemRemover == 's'){
+                            break;
+                        }
+
+                        //Teste se existe o item
+                        if (existeItem == false){
+                            alert("Digite um item existente na lista.");
+                        }
+                    }                    
+                }
+                else {                    
+                    alert ("Você precisa adicionar pelo menos 1 item para remover.");
+                }                                       
+            }
+        }            
+
+        //Sair do while
+        else if (continuarTeste == 'não' || continuarTeste == 'nao' || continuarTeste == 'n') {
+            continuar = false;
+        }
+
+        //Teste de erro
+        else {
+            alert("Comando inválido");
+        }           
+   }
+
+   //Impressão da Lista
+   let i = 0;
+   while (i < lista[0].length){
+       console.log(lista[0][i] +  ':\n');
+       i++;
+
+       let j = 0;
+       while (j < lista[i].length){
+           console.log('     ' + lista[i][j] + '\n');
+           j++;
+       }
+   }
+</script>
