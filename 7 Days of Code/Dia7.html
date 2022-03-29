@@ -1,0 +1,58 @@
+<!-- Ronan Sales Ribeiro --> 
+<!-- https://7daysofcode.io/ --> 
+<!-- Dia 7 --> 
+
+<!DOCTYPE html>
+
+<script>
+    //Funcoes da calculadora
+    function soma(numero1,numero2) {
+        return numero1+numero2
+    }
+
+    function subtracao(numero1,numero2) {
+        return numero1-numero2
+    }
+
+    function multiplicacao(numero1,numero2) {
+        return numero1*numero2
+    }
+
+    function divisao(numero1,numero2) {
+        return numero1/numero2
+    }
+    
+    //Declaração das variáveis
+    let numero1, numero2
+    let operacao = parseInt(prompt ("Digite qual operação deseja realizar:\n    1. Soma\n    2. Subtração\n    3. Multiplicação\n    4. Divisão\n    5. Sair"))
+    if (operacao != 5) {
+        numero1 = parseFloat(prompt ("Digite o primeiro número: "))    
+        numero2 = parseFloat(prompt ("Digite o segundo número: "))
+    }
+
+    //Operação
+    switch (operacao) {
+        case 1: 
+            console.log(`A soma de ${numero1} e ${numero2} é: ${soma(numero1,numero2)}`)
+            break
+        case 2: 
+            console.log(`A subtração de ${numero1} e ${numero2} é: ${subtracao(numero1,numero2)}`)
+            break
+        case 3: 
+            console.log(`A multiplicacção de ${numero1} e ${numero2} é: ${multiplicacao(numero1,numero2)}`)
+            break
+        case 4: 
+            console.log(`A divisão de ${numero1} e ${numero2} é: ${divisao(numero1,numero2)}`)
+            break
+        case 5:
+            console.log(`Até a próxima.`)
+            break
+        default:
+            console.log(`Digite uma operação válida.`)
+    }
+</script>
+
+
+
+
+
