@@ -1,0 +1,27 @@
+/*
+Ronan Sales Ribeiro
+Lógica para Programação III - Capegemini
+Ex. 15 - Faça um algoritmo que receba um número e diga se este número está no intervalo entre 100 e 200
+*/
+
+import java.util.Scanner;
+
+public class App {
+    public static void main(String[] args) throws Exception {
+        
+        //Ler váriavel
+        Scanner leitorScanner = new Scanner(System.in);
+
+        System.out.println("Digite um valor: ");
+        int num = leitorScanner.nextInt();
+
+        leitorScanner.close();
+        
+        //Teste lógico se o número está entre o intervalo definido
+        if (num >= 100 && num <= 200) {
+            System.out.println("O número está no intervalo");
+        } else {
+            System.out.println("O número não está no intervalo");
+        }
+    }
+}
