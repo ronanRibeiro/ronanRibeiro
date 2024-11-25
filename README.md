@@ -1,4 +1,4 @@
 I'm Ronan Ribeiro.
-I'm interest in starting working as a dev. Currently, I am studying Node.Js and coursing Tecnologia em Sistemas para Internet (Technologist in Internet System ) on IFMT.
+I am currently working on Shed Mate and studying Software Architecture on FIAP
 
 Contact: ronan.rsales@gmail.com
